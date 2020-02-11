@@ -1,13 +1,12 @@
 # Crash Course: XML and XSLT for Indologists
 
 ## preliminary considerations: text encoding and presentation
-
-- text encoding is not to be confounded with character encoding, cf. [https://scripts.sil.org/IWS-Chapter02](this site) for a short introduction;
+- text encoding is not to be confounded with character encoding, cf. [this site](https://scripts.sil.org/IWS-Chapter02) for a short introduction;
 - text encoding is mostly done with a concrete form of presentation (a printed book, web page, poster) in mind, the content is structured and differentiated according to the necessities of the processor (e.g. LaTeX commands separate content from presentation), often inside a user interface that displays the encoded information as formatted text in a similar way to the intended result (WYSIWYG, e.g. office suites); the text encoding has to be converted if another form of presentation is desired
 - textual content can also be encoded according to its function regardless of presentation, which is especially useful if:
   - various presentations should be generated from the same source file,
   - a subsequent use of the content by yourself or others is foreseeable/desirable,
-  - you don't want to deal with typesetting details (yet).
+  - you don't want to deal with formatting details (yet).
 - general drawbacks of functional markup:
   - functional markup is usually more intrusive and less intuitive to read,
   - presentation has to be styled separately.
@@ -19,7 +18,7 @@
 - TEI = Text Encoding Initiative
 
 ## xml I: minimal example of a well-formed xml-file
-- [mini.xml](this) file
+- [this](mini.xml) file
 
 ### structure
 1. proloque with xml-declaration,
@@ -43,7 +42,7 @@
 - namespace: 
   - uniquely identifies a set of names so that there is no ambiguity when objects having different origins but the same names are mixed together,
   - example:
-  ```
+  ```xml
   <root>
   <element>
   <subelement>
@@ -58,7 +57,7 @@
 
 ## xslt I: building modifications on identity transformation
 - requirement: xslt-processor like [http://saxon.sourceforge.net/#F9.9HE](Saxon-HE)
-- [identity.xsl](xml identity transformation) with xslt2
+- [xml identity transformation](identity.xsl) with xslt2
 - apply stylesheet to xml-file, e.g. with Java: `java /path/to/saxon9he.jar -s:source.xml -xsl:stylesheet.xsl`
 - elements are matched or selected with XPath expressions, using
   - absolute paths: `/root/path/to/some/element`
@@ -85,8 +84,8 @@
 - validation scheme: different formats (*.dtd, *.rnc, *.rng), same function: 
   - defines the structure of the markup (which elements can nest, which attributes are allowed for certain elements, etc.),
   - can be linked to an xml-file, a suitable editor can validate and auto-complete the markup on-the-fly and thus help to write 
-- schemes for xml that is compliant with the proposal of the Text Encoding Initiative (TEI) can be created [https://romabeta.tei-c.org/](here),
-- the current Guidelines for encoding can be found and downloaded [https://www.tei-c.org/release/doc/tei-p5-doc/en/html/index.html](here).
+- schemes for xml that is compliant with the proposal of the Text Encoding Initiative (TEI) can be created [here](https://romabeta.tei-c.org/),
+- the current Guidelines for encoding can be found and downloaded [here](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/index.html).
 
 ## xslt II: outputting plain text
 - [tei-bsp.xsl](plain text) with xslt2 from TEI
