@@ -44,20 +44,22 @@
   - example:
   ```xml
   <root>
-  <element>
-  <subelement>
-  </subelement>
-  </element>
-  <element xmlns="https://www.somepage.com"><!-- set namespace for whole subtree, "element" is only matched if namespace is specified -->
-  <subelement><!-- inherits namespace -->
-  </subelement>
-  </element>
+	<element>
+		<subelement>
+		</subelement>
+	</element>
+	<element xmlns="https://www.somepage.com">
+  	<!-- set namespace for whole subtree, "element" is only matched if namespace is specified -->
+  	     <subelement>
+	     <!-- inherits namespace -->
+	     </subelement>
+	</element>
   </root>
   ```
 
 ## xslt I: building modifications on identity transformation
 - requirement: xslt-processor like [http://saxon.sourceforge.net/#F9.9HE](Saxon-HE)
-- [xml identity transformation](identity.xsl) with xslt2
+- [xml identity transformation](xslt-stylesheets/identity.xsl) with xslt2
 - apply stylesheet to xml-file, e.g. with Java: `java /path/to/saxon9he.jar -s:source.xml -xsl:stylesheet.xsl`
 - elements are matched or selected with XPath expressions, using
   - absolute paths: `/root/path/to/some/element`
@@ -88,4 +90,4 @@
 - the current Guidelines for encoding can be found and downloaded [here](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/index.html).
 
 ## xslt II: outputting plain text
-- [tei-bsp.xsl](plain text) with xslt2 from TEI
+- [plain text](xslt-stylesheets/tei-bsp.xsl) with xslt2 from TEI
