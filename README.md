@@ -50,7 +50,7 @@
 	</element>
 	<element xmlns="https://www.somepage.com">
   	<!-- set namespace for whole subtree, "element" is only matched if namespace is specified -->
-  	     <subelement>
+	     <subelement>
 	     <!-- inherits namespace -->
 	     </subelement>
 	</element>
@@ -58,7 +58,7 @@
   ```
 
 ## xslt I: building modifications on identity transformation
-- requirement: xslt-processor like [http://saxon.sourceforge.net/#F9.9HE](Saxon-HE)
+- requirement: xslt-processor like [Saxon-HE](http://saxon.sourceforge.net/#F9.9HE)
 - [xml identity transformation](xslt-stylesheets/identity.xsl) with xslt2
 - apply stylesheet to xml-file, e.g. with Java: `java /path/to/saxon9he.jar -s:source.xml -xsl:stylesheet.xsl`
 - elements are matched or selected with XPath expressions, using
@@ -77,7 +77,7 @@
     11. `preceeding`
     12. `preceeding-sibling`
     13. `self` or `.`
-  - wildcards
+  - wildcards:
     - `*` for any string, e.g. `@` matches one attribute, `@attr` only matches the attribute named ‘attr’, `@*` matches all attributes of an element,
     - `node()` matches elements, text, comments, and processing instructions (i.e. everything except attributes),
     - `text()` matches text content.
