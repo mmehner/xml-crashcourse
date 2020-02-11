@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="sa_mini">
+  <teiHeader xml:lang="en">
+    <fileDesc>
+      <titleStmt>
+	<title>Minimal Example</title>
+      </titleStmt>
+      <publicationStmt>
+	<publisher></publisher>
+      </publicationStmt>
+      <sourceDesc>
+	<bibl></bibl>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  
+  <text xml:lang="sa-Latn" xml:id="mini">
+    <body>
+      <div>
+      </div>
+    </body>
+  </text>
+</TEI>

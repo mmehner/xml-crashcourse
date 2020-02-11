@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root attribute="value">
+  <!-- comment -->
+  <meta>
+  </meta>
+  <text>
+    <predefinedEntities>
+      <lessthan>&lt;</lessthan>
+      <greaterthan>&gt;</greaterthan>
+      <ampersand>&amp;</ampersand>
+      <apostrophe>&apos;</apostrophe>
+      <quotation>&quot;</quotation>
+    </predefinedEntities>
+  </text>
+</root>
