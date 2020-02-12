@@ -1,0 +1,57 @@
+\documentclass[border=20pt]{standalone}
+\usepackage{xunicode}
+\usepackage{fontspec}
+\usepackage{libertine}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+%\usetikzlibrary{mindmap}
+\pagecolor{white}
+
+\usepackage{enumitem}
+
+
+
+\tikzset{box/.append style={black, draw=black, fill=gray!20, scale=.7,}}
+\tikzset{pres/.append style={black, rounded corners, draw=black, fill=blue!20, scale=.7,}}
+
+\begin{document}
+\begin{tikzpicture}
+
+  %nodes
+  \node[align=center, scale=1.4] (title) at (0, 2.5) {Exemplary Workflow};
+  \node[align=center, scale=.9] (subtitle) at (0, 2) {text encoding to presentation};
+
+  \draw[red, dashed, fill=red!10] (-3.7,0) ellipse [x radius=51pt, y radius=30pt, red];
+
+  \node[align=center, scale=.5, red] (opt) at (-3.7, .7) {optional};
+  
+  \node[box, align=center] (custom) at (-4, 0) {custom functional\\ XML};
+  
+  \node[box, align=center] (tei) at (-1, 0) {TEI-conformant\\ XML};
+
+  \node[box, align=center] (latex) at (2, 1) {\LaTeX };
+
+  \node[pres, align=center] (pdf) at (4, 1) {PDF};
+
+  \node[pres, align=center] (html) at (2, 0) {XHTML};
+
+  \node[pres, align=center] (word) at (4, 0) {LibreOffice \\ MS Word};
+
+  \node[pres, align=center] (pt) at (2, -1) {plain text};
+
+  % edges
+
+  \draw[->] (custom) -- (tei) node [midway, below, scale=.5] {XSLT};
+
+  \draw[->] (tei) -- (latex) node [midway, above, sloped, scale=.5] {XSLT};
+
+  \draw[->] (tei) -- (html) node [midway, above, scale=.5] {XSLT};
+
+  \draw[->] (tei) -- (pt) node [midway, below, sloped, scale=.5] {XSLT};
+
+  \draw[->] (latex) -- (pdf) node [midway, above, scale=.5] {xelatex};
+
+  \draw[<-] (html) -- (word) node [midway, above, scale=.5] {import};
+
+\end{tikzpicture}
+\end{document}
