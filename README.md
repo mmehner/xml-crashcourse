@@ -82,7 +82,7 @@
     - `*` for any string, e.g. `@` matches one attribute, `@attr` only matches the attribute named ‘attr’, `@*` matches all attributes of an element,
     - `node()` matches elements, text, comments, and processing instructions (i.e. everything except attributes),
     - `text()` matches text content.
-- cf. [output](output_mini-identity.xml)
+- cf. [output](output_mini_identity.xml)
 
 ## xml II: validation and TEI
 - validation scheme: different formats (*.dtd, *.rnc, *.rng), same function: 
