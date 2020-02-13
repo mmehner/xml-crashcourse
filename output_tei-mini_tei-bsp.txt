@@ -1,0 +1,12 @@
+Minimalbeispiel 2
+
+Heading
+
+This could be a phrase inside a paragraph.
+
+this is a line
+yet another line
+inside a verse
+environment
+
+[Note on the phrase.]

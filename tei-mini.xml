@@ -5,7 +5,7 @@
   <teiHeader xml:lang="en">
     <fileDesc>
       <titleStmt>
-	<title>Minimal Example</title>
+	<title>Minimalbeispiel 2</title>
       </titleStmt>
       <publicationStmt>
 	<publisher></publisher>
@@ -16,9 +16,24 @@
     </fileDesc>
   </teiHeader>
   
-  <text xml:lang="sa-Latn" xml:id="mini">
+  <text xml:lang="en" xml:id="mini">
     <body>
-      <div>
+      <div type="book" n="1">
+      <div type="chapter" n="1">
+	<head>Heading</head>
+	<pb edRef="A" n="1"/>
+	
+	<p>This could be <seg xml:id="p1">a phrase</seg> inside a paragraph.</p>
+
+	<note target="#p1">Note on the phrase.</note>
+	
+	<lg>
+	  <l><seg type="pAda" n="a">this is a line</seg></l>
+	  <l><seg type="pAda" n="b">yet another line</seg></l>
+	  <l><seg type="pAda" n="c">inside a verse</seg></l>
+	  <l><seg type="pAda" n="d">environment</seg></l>
+	</lg>
+      </div>
       </div>
     </body>
   </text>

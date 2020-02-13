@@ -1,17 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<root attribute="value">
+<?xml version="1.0" encoding="UTF-8"?><root attribute="value">
   <!-- comment -->
   <!-- the following branch will be completely cut in the identity.xsl - transformation -->
-  <meta>
-    <title>Minimalbeispiel</title>
-    <author>
-      <attributed>Minima Liszt</attributed>
-      <historical>Anonymous</historical>
-    </author>
-    <editor>Herr Rausgeber</editor>
-    <date>2020-02-13</date>
-  </meta>
+  
   <text>
     <book>
       <chapter>
@@ -31,42 +21,37 @@
 	<lessthan>&lt;</lessthan>
 	<greaterthan>&gt;</greaterthan>
 	<ampersand>&amp;</ampersand>
-	<apostrophe>&apos;</apostrophe>
-	<quotation>&quot;</quotation>
+	<apostrophe>'</apostrophe>
+	<quotation>"</quotation>
       </predefinedEntities>
     </book>
     <book>
       <chapter>
-	<skip><!-- this element will be skipped in the identity.xsl - transformation -->
+	<!-- this element will be skipped in the identity.xsl - transformation -->
 	  <p>This paragraph should be in a chapter.</p>
-	</skip>
+	
       </chapter>
       <chapter>
 	<!-- the following element will be expanded in the identity.xsl - transformation -->
-	<section>
+	<section><subsection>
 	  <p>This paragraph should be in a subsection.</p>
-	</section>
+	</subsection></section>
       </chapter>
       <chapter>
 	<!-- from the following element, only the first child will be selected in the identity.xsl - transformation -->
-	<choice>
-	  <var>kiṃ cit</var>
-	  <var>kiṃcit</var>
-	</choice>
-      </chapter>
+	<var>kiṃ cit</var>
+      <p>This paragraph belongs to the previous chapter.</p></chapter>
       <chapter>
 	<!--the following element will be relocated to the previous chapter in the identity.xsl - transformation -->
-	<relocate>
-	  <p>This paragraph belongs to the previous chapter.</p>
-	</relocate>
+	
       </chapter>
       <chapter>
 	<!--the following list of readings will be reduced, moving some elements to attributes in the identity.xsl - transformation -->
 	<readinglist>
-	  <reading>line<witness>A</witness></reading>
-	  <reading>lie<witness>B</witness></reading>
-	  <reading>lark<witness>C</witness></reading>
-	  <reading>lars<witness>D</witness></reading>
+	  <reading wit="A">line</reading>
+	  <reading wit="B">lie</reading>
+	  <reading wit="C">lark</reading>
+	  <reading wit="D">lars</reading>
 	</readinglist>
       </chapter>
     </book>

@@ -10,6 +10,7 @@
 - general drawbacks of functional markup:
   - functional markup is usually more intrusive and less intuitive to read,
   - presentation has to be styled separately.
+- cf. [this chart](charts/editorial-workflow.pdf)
 
 ## some acronyms
 - XML = Extensible Markup Language
@@ -81,6 +82,7 @@
     - `*` for any string, e.g. `@` matches one attribute, `@attr` only matches the attribute named ‘attr’, `@*` matches all attributes of an element,
     - `node()` matches elements, text, comments, and processing instructions (i.e. everything except attributes),
     - `text()` matches text content.
+- cf. [output](output_mini-identity.xml)
 
 ## xml II: validation and TEI
 - validation scheme: different formats (*.dtd, *.rnc, *.rng), same function: 
@@ -91,3 +93,4 @@
 
 ## xslt II: outputting plain text
 - [plain text](xslt-stylesheets/tei-bsp.xsl) with xslt2 from TEI
+- cf. [output](output_tei-mini_tei-bsp.txt)
